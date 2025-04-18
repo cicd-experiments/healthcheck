@@ -98,7 +98,7 @@ jobs:
           script: |
             cd ${{ vars.PROJECT_DIR }}
             docker compose --env-file ${{ env.ENV_FILENAME }} down
-            docker image rm ${{ env.IMAGE }}
+            docker image rm ${{ env.IMAGE }} 2> /dev/null
             docker compose --env-file ${{ env.ENV_FILENAME }} up -d
   healthcheck:
     name: Healthcheck service
