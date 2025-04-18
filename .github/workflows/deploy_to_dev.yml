@@ -76,8 +76,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Create .env file
         run: |
-          echo "APP_PORT=${{ vars.HEALTHCHECK_PORT }}" > ${{ env.ENV_FILENAME }}
-          echo "CONTAINER_NAME=${{ env.CONTAINER_NAME }}" >> ${{ env.ENV_FILENAME }}
+          echo "CONTAINER_NAME=${{ env.CONTAINER_NAME }}" > ${{ env.ENV_FILENAME }}
           echo "IMAGE=${{ env.IMAGE }}" >> ${{ env.ENV_FILENAME }}
       - name: Copy files via ssh password
         uses: appleboy/scp-action@v0.1.7
