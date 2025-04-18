@@ -1,6 +1,5 @@
 name: Deploy to the development stand
 on:
-  workflow_dispatch:
   push:
     branches:
       - develop
