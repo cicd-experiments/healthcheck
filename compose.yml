@@ -12,6 +12,9 @@ services:
       timeout: 10s
       retries: 5
       start_period: 30s
+    networks:
+      - iam-tool_net
+
 networks:
   iam-tool_net:
     external: true
